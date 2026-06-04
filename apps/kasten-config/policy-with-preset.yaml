@@ -1,0 +1,17 @@
+apiVersion: config.kio.kasten.io/v1alpha1
+kind: Policy
+metadata:
+  name: test-vm-preset
+  namespace: kasten-io
+spec:
+  actions:
+  - action: backup
+  presetRef:
+    name: jai-test-preset
+    namespace: kasten-io
+  selector:
+    matchExpressions:
+    - key: k10.kasten.io/virtualMachineRef
+      operator: In
+      values:
+      - vm-test-jai/*
