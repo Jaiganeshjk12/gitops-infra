@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ataha/gitops-infra.git
+    repoURL: https://github.com/jaiganeshjk12/gitops-infra.git
     targetRevision: main
     path: apps/kasten-config
   destination:
