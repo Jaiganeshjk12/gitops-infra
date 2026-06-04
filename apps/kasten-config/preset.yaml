@@ -1,0 +1,24 @@
+kind: PolicyPreset
+apiVersion: config.kio.kasten.io/v1alpha1
+metadata:
+  name: jai-test-preset
+  namespace: kasten-io
+spec:
+  backup:
+    frequency: "@daily"
+    retention:
+      daily: 1
+    profile:
+      name: test-jai-wasabi
+      namespace: kasten-io
+  export:
+    retention:
+      daily: 7
+    profile:
+      name: test-jai-wasabi
+      namespace: kasten-io
+    blockModeProfile:
+      name: test-jai-wasabi
+      namespace: kasten-io
+    exportData:
+      enabled: true
