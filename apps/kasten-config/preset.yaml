@@ -3,6 +3,8 @@ apiVersion: config.kio.kasten.io/v1alpha1
 metadata:
   name: jai-test-preset
   namespace: kasten-io
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 spec:
   backup:
     frequency: "@daily"
